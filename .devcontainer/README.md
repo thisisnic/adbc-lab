@@ -4,7 +4,7 @@ This devcontainer is intended for a fuller Codespaces workshop setup:
 
 - Python workspace container
 - PostgreSQL sidecar with seeded `trips` data
-- Python packages installed from `requirements.txt`
+- Python packages installed with `uv`
 
 ## What it gives learners
 
@@ -20,14 +20,15 @@ If you want to validate whether Codespaces is the right teaching environment, th
 ```bash
 python --version
 uv --version
-python -m pip install -r requirements.txt
-python app.py
+uv pip install -r requirements.txt
+python exercise_1.py
+python exercise_2.py
 ```
 
 Things to judge while testing:
 
 - how long the codespace build takes
-- whether `pip install -r requirements.txt` is painless
+- whether `uv pip install -r requirements.txt` is painless
 - whether Postgres is reliably ready when you need it
 - whether the whole flow is simpler than local setup
 
