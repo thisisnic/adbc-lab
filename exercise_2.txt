@@ -32,14 +32,3 @@ The script runs the same aggregation query against both Postgres and DuckDB.
 
 - Are the results the same?
 - What would you need to change to point this at a completely different database?
-
-
-Go further
-----------
-
-If you've got time:
-
-- Try querying your local DuckDB file directly — it's just a file on disk.
-  What tables are in it? What does the schema look like?
-- Try changing the query in exercise_2.py — can you find the longest
-  average trip duration by start station?

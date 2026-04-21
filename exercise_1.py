@@ -30,7 +30,8 @@ with dbapi.connect(driver="postgresql", db_kwargs={"uri": POSTGRES_URI}) as conn
         )
         result = cur.fetch_arrow_table()
 
-print(result)
-print()
-print("Schema:")
-print(result.schema)
+print(f"{len(result):,} rows")
+
+# Try uncommenting these to explore the result:
+# print(result)
+# print(result.schema)

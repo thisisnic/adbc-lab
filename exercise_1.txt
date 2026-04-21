@@ -39,6 +39,3 @@ If you've got time, try these:
 
 - Change fetch_arrow_table() to fetchall() — what do you get instead?
 - Change fetch_arrow_table() to fetch_df() — what do you get?
-- Add print(result.schema) to see the column types
-- Try changing the query — what are the most popular start stations?
-  What's the average trip duration by user type?
