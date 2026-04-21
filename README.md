@@ -1,28 +1,25 @@
 # ADBC Lab
 
-Minimal workshop test repo for validating a Codespaces-based ADBC teaching environment.
-
-The code/exercises contained here do not represent final versions of exercises for the workshop, but do contain a basic version of code generated with matching expected dependencies, to test the following assumptions:
-
-- Python code uses `adbc-driver-manager`
-- learners install `dbc` themselves
-- learners install the `duckdb` and `postgresql` drivers with `dbc`
-- Python scripts run with `uv run`
+Hands-on exercises for the ADBC workshop. Uses NYC Citi Bike trip data (~1M rows) loaded into a Postgres database.
 
 ## Setup
 
-Go to https://github.com/codespaces/new and select this repo.
+### Option 1: GitHub Codespaces (recommended)
 
-## Intended Codespaces Test Flow
+Go to https://github.com/thisisnic/adbc-lab and click **Use this template** → **Open in a codespace**.
 
-```bash
-python --version
-uv --version
-uv tool install dbc
-dbc install duckdb
-dbc install postgresql
-uv run exercise_1.py
-uv run exercise_2.py
-```
+The environment will set up automatically — Python, uv, and a Postgres database with the trip data pre-loaded.
 
-If both scripts run cleanly in Codespaces, the environment is at least plausible for teaching.
+### Option 2: Local
+
+You'll need:
+- Python 3.11+
+- [uv](https://docs.astral.sh/uv/)
+- A running PostgreSQL instance
+
+## Exercises
+
+Follow the instructions in the exercise files:
+
+1. **Exercise 1** (`exercise_1.txt`): Install ADBC and run your first query
+2. **Exercise 2** (`exercise_2.txt`): Move data to a local DuckDB and query both backends
