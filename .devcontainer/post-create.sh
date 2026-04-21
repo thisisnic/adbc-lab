@@ -11,7 +11,7 @@ fi
 export PATH="$HOME/.local/bin:$PATH"
 
 # Download Citi Bike trip data
-DATA_URL="https://github.com/thisisnic/adbc-lab/releases/download/data-v1/citibike_trips.parquet"
+DATA_URL="https://github.com/columnar-tech/adbc-lab/releases/download/data-v1/citibike_trips.parquet"
 DATA_FILE="citibike_trips.parquet"
 
 if [ ! -f "$DATA_FILE" ]; then
