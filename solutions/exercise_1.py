@@ -14,8 +14,7 @@ POSTGRES_URI = os.getenv(
     "ADBC_POSTGRES_URI", "postgresql://postgres:postgres@postgres:5432/postgres"
 )
 
-# TODO: connect to Postgres using ADBC
-with ___(driver=___, db_kwargs={"uri": POSTGRES_URI}) as conn:
+with dbapi.connect(driver="postgresql", db_kwargs={"uri": POSTGRES_URI}) as conn:
     with conn.cursor() as cur:
         cur.execute(
             """
@@ -29,8 +28,7 @@ with ___(driver=___, db_kwargs={"uri": POSTGRES_URI}) as conn:
             LIMIT 100000
             """
         )
-        # TODO: fetch the result as an Arrow table
-        result = cur.___()
+        result = cur.fetch_arrow_table()
 
 print(result)
 print(f"\n{len(result)} rows")
